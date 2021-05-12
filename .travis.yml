@@ -11,5 +11,4 @@ addons:
 script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=warmy54_Le-repo-de-test
-=======
->>>>>>> c83904d355a24ec506a22079b51e65c20bf3cfc2
+
