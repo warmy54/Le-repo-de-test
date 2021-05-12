@@ -1,5 +1,4 @@
 language: java
-<<<<<<< HEAD
 Add the following lines to your .travis.yml file:
 
 addons:
