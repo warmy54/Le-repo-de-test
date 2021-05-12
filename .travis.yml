@@ -1,2 +1,12 @@
 language: java
+Add the following lines to your .travis.yml file:
 
+addons:
+  sonarcloud:
+    organization: "warmy54"
+    token:
+      secure: "tjA3Gr1mYf2LbUplEorTMRdPGVdezjSOnqxhZQfirFUyUZU2UeZbsIyppQa3XPzbblxOXUr1vec40ojBbKFcZie1+Wc6dZ6AqGhKclZ7G+whDjQbiOcsw2yVRjX1e4ipSsk61n/xA+IZyIyvNTrRbuzHIDEosfbvGDR0ILru2NkXmsgFvUAXXz++va9sV/zKqCwJVEYmDM5T+GCguPSCCYSvWE/e4iJr4Zf3NrsJPyuTm9yUfa7OU2TTzOXjhBdEFdEUid0iCptcpQkF3szamTtEno1EnCb6VMTzmFTp7SsxLUB2wGsnxX4q6rvSVMFYZ26gHU6LNPsXhOO13s11riU6DqPhGmVpHpzXp0uWi/FHml682PyIV7dy5RC9Q7k09Cqe4KrdEdEJHHgUGftdU0b/dUfn+53nApJDHFYPyyubnxHUJkLxGnsbepAmQ6HGWUbtS1dJeV2OquHbuW+o9VmXr1jyISK6os17ZEvWG/AVEphVlOGSjMf7+wJSWdCikAy5bVe3hK4cj1/98EBMWQQ+Jq3pmdH+KSgabjGPPIdJnZ2r1qhoJ72obCkZoLK7MgHEikHraU4zvdQZb2CunkI840fPrCpDhq4rWYHfAfZTKD/sJD217iaghMpUeY0uR9SzbxpwEjnzAe8g0jPnJmj601YnBxRCQdiwJrOwsks=" # encrypted value of your token
+
+script:
+  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=warmy54_Le-repo-de-test
